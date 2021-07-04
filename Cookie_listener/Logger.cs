@@ -22,11 +22,17 @@ namespace Cookie_listener
 
         public void Start()
         {
-            _watcher.EnableRaisingEvents = true;
-            while (_enabled)
+            try
             {
-                Thread.Sleep(1000);
+                _watcher.EnableRaisingEvents = true;
+                while (_enabled)
+                {
+                    Thread.Sleep(1000);
+                }
             }
+            catch (Exception ex) { RecordEntry("ошибка : ", ex.Message); }
+           
+           
         }
         public void Stop()
         {
@@ -83,7 +89,7 @@ namespace Cookie_listener
             // создаем имя и разшерение для файла лога
             _name_log_file = "\\log_fo_Chrome.txt";
             // адрес папки с куки
-            _path_to_cookie += "\\Google\\Chrome\\User Data\\Profile 39";
+            _path_to_cookie += "\\Google\\Chrome\\User Data\\Default";
             _watcher = new FileSystemWatcher(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + _path_to_cookie); // тут мы укажем то за чем мы следим           
         }       
     }

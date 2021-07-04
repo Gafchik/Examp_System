@@ -26,9 +26,7 @@ namespace Examp_System
         public MainWindow()
         {
             InitializeComponent();
-            _path_fo_Chrome = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Google\\Chrome\\User Data\\Profile 39\\Cookies";
-            _path_fo_Opera = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Opera Software\\Opera Stable\\Cookies";
-            _path_fo_FireFoxe = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Mozilla\\Firefox\\Profiles\\zvivgqy3.default\\cookies.sqlite";
+          
             _data_grid = new DataGrid();
             
             
