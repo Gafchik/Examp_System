@@ -53,14 +53,26 @@
       <DependentUpon>Cookie_listener_Installer.cs</DependentUpon>
     </Compile>
     <Compile Include="Logger.cs" />
-    <Compile Include="Service_fo_chrome.cs">
+    <Compile Include="Services\Service_fo_chrome.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Service_fo_chrome.Designer.cs">
+    <Compile Include="Services\Service_fo_chrome.Designer.cs">
       <DependentUpon>Service_fo_chrome.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Service_fo_FireFox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\Service_fo_FireFox.Designer.cs">
+      <DependentUpon>Service_fo_FireFox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Service_fo_Opera.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\Service_fo_Opera.Designer.cs">
+      <DependentUpon>Service_fo_Opera.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

