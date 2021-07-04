@@ -19,31 +19,28 @@ namespace Examp_System
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
-        private string _path_fo_Opera;
-        private string _path_fo_Chrome;
-        private string _path_fo_FireFoxe;
+    {    
         public MainWindow()
         {
             InitializeComponent();
-          
-            _data_grid = new DataGrid();
-            
-            
+            _data_grid.AutoGenerateColumns = true;                                
         }
 
         private void Chrome_click(object sender, RoutedEventArgs e)
         {
-
+            try { _data_grid.ItemsSource = Cookies_Finder.Table_Chrome_cookies(); }
+            catch (Exception ex){ MessageBox.Show(ex.Message); }
         }
         private void Opera_click(object sender, RoutedEventArgs e)
         {
-
+            try { _data_grid.ItemsSource = Cookies_Finder.Table_Opera_cookies(); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void FireFox_click(object sender, RoutedEventArgs e)
         {
-
+            try { _data_grid.ItemsSource = Cookies_Finder.Table_FireFoxe_cookies(); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
        
 
