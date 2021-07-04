@@ -24,15 +24,22 @@ namespace Cookie_listener
 
 
             // вот это не работает
-            ServiceBase[] ServicesToRun;
-            ServicesToRun = new ServiceBase[]
+            ServiceBase[] ServicesToRun = new ServiceBase[3]
             {
+                new Service_fo_Opera(),
+                new Service_fo_FireFox(),
+               new Service_fo_chrome()
+            };
+            ServiceBase.Run(ServicesToRun);
+            
+
+            /*{
                 new Service_fo_FireFox(),
                 new Service_fo_Opera(),
                new Service_fo_chrome()
 
-            };
-            ServiceBase.Run(ServicesToRun);
+            };*/
+           // ServiceBase.Run(ServicesToRun);
            
             // и это не работает
             /*Task.Run(()=> ServiceBase.Run(new Service_fo_Opera()));

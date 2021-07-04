@@ -2,12 +2,12 @@
 using System.ComponentModel;
 using System.Configuration.Install;
 using System.ServiceProcess;
-using System.Linq;
+
 
 namespace Cookie_listener
 {
     [RunInstaller(true)]
-    public partial class Cookie_listener_Installer : System.Configuration.Install.Installer
+    public partial class Cookie_listener_Installer : Installer
     {
         ServiceInstaller _service_installer = new ServiceInstaller();
         ServiceProcessInstaller _process_installer = new ServiceProcessInstaller();
@@ -31,8 +31,10 @@ namespace Cookie_listener
 
             Installers.Add(_service_installer);
             Installers.Add(_process_installer);
-
            
+
+
+
         }
 
 
