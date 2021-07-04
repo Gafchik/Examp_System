@@ -31,6 +31,7 @@ namespace Examp_System
             _path_fo_FireFoxe = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Mozilla\\Firefox\\Profiles\\zvivgqy3.default\\cookies.sqlite";
             _data_grid = new DataGrid();
             
+            
         }
 
         private void Chrome_click(object sender, RoutedEventArgs e)
