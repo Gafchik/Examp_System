@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Examp_System"
         mc:Ignorable="d" ResizeMode="NoResize"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Cookies View" Height="450" Width="800">
+    <Grid Background="GreenYellow">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
