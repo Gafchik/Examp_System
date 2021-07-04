@@ -17,9 +17,9 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Content="Chrome" Grid.Column="0" Grid.Row="0" Margin="30 0 30 0" Click="Chrome_click"/>
-        <Button Content="Opera" Grid.Column="1" Grid.Row="0" Margin="30 0 30 0" Click="Opera_click"/>
-        <Button Content="FireFox" Grid.Column="2" Grid.Row="0" Margin="30 0 30 0" Click="FireFox_click"/>
+        <Button Content="Chrome" Grid.Column="0" Grid.Row="0" Margin="30 10 30 0" Click="Chrome_click"/>
+        <Button Content="Opera" Grid.Column="1" Grid.Row="0" Margin="30 10 30 0" Click="Opera_click"/>
+        <Button Content="FireFox" Grid.Column="2" Grid.Row="0" Margin="30 10 30 0" Click="FireFox_click"/>
         <DataGrid x:Name="_data_grid" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="2" Margin="15" />
     </Grid>
 </Window>

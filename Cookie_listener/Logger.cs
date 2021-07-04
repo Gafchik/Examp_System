@@ -87,7 +87,7 @@ namespace Cookie_listener
             _watcher = new FileSystemWatcher(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + _path_to_cookie); // тут мы укажем то за чем мы следим           
         }       
     }
-
+   
     public class Logger_fo_FireFoxe : logger
     {
         public Logger_fo_FireFoxe()
@@ -96,7 +96,7 @@ namespace Cookie_listener
             _name_log_file = "\\log_fo_FireFoxe.txt";
             // адрес папки с куки
             _path_to_cookie += "\\Mozilla\\Firefox\\Profiles\\zvivgqy3.default";
-            _watcher = new FileSystemWatcher(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + _path_to_cookie); // тут мы укажем то за чем мы следим           
+            _watcher = new FileSystemWatcher(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + _path_to_cookie); // тут мы укажем то за чем мы следим           
         }
     }
 
