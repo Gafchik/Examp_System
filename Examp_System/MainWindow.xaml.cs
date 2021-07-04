@@ -24,5 +24,22 @@ namespace Examp_System
         {
             InitializeComponent();
         }
+
+        private void Chrome_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Opera_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FireFox_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+       
+
+
     }
 }
