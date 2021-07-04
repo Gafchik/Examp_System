@@ -20,8 +20,8 @@ namespace Cookie_listener
             _process_installer.Username = null;
             //===========================================//
             _service_installer.StartType = ServiceStartMode.Manual; // вид запуска 
-            _service_installer.ServiceName = "Arlam"; // имя службы в спике
-            _service_installer.Description = "запускает мой будильник"; // описание
+            _service_installer.ServiceName = "listener"; // имя службы в спике
+            _service_installer.Description = "слушатель изменений куки файлов браузерова"; // описание
 
             _service_installer.AfterInstall += _installer_AfterInstall; // после установки
             _service_installer.AfterRollback += _installer_AfterRollback; // после ошибки
