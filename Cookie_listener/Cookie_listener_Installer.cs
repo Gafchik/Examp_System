@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Configuration.Install;
 using System.ServiceProcess;
+using System.Linq;
 
 namespace Cookie_listener
 {
@@ -18,6 +19,7 @@ namespace Cookie_listener
             // что бы не просило логин и пароль учетки но хз будет ли работать
             _process_installer.Password = null;
             _process_installer.Username = null;
+
             //===========================================//
             _service_installer.StartType = ServiceStartMode.Manual; // вид запуска 
             _service_installer.ServiceName = "listener"; // имя службы в спике
@@ -32,6 +34,8 @@ namespace Cookie_listener
 
            
         }
+
+
         private void _installer_AfterUninstall(object sender, InstallEventArgs e)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -50,7 +54,6 @@ namespace Cookie_listener
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Установилось");
-            this.Container.
             Console.ForegroundColor = ConsoleColor.White;
         }
     }

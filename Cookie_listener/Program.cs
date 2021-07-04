@@ -11,29 +11,29 @@ namespace Cookie_listener
         /// </summary>
         /// 
        
-          
-        public static async void Go_Services()
+          //  не работает
+      /*  public static async void Go_Services()
         {
             await Task.Run(() => Task.Run(() => ServiceBase.Run(new Service_fo_Opera())));
             await Task.Run(() => Task.Run(() => ServiceBase.Run(new Service_fo_chrome())));
             await Task.Run(() => Task.Run(() => ServiceBase.Run(new Service_fo_FireFox())));
-        }
+        }*/
         static void Main()
         {
-            Go_Services();
+            // Go_Services();
 
 
             // вот это не работает
-            /*ServiceBase[] ServicesToRun;
+            ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
                 new Service_fo_FireFox(),
                 new Service_fo_Opera(),
-               new Service_fo_chrome(),
+               new Service_fo_chrome()
 
             };
-            ServiceBase.Run(ServicesToRun);*/
-
+            ServiceBase.Run(ServicesToRun);
+           
             // и это не работает
             /*Task.Run(()=> ServiceBase.Run(new Service_fo_Opera()));
             Task.Run(()=> ServiceBase.Run(new Service_fo_chrome()));
