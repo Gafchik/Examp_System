@@ -14,7 +14,7 @@ namespace Cookie_listener
         {
             InitializeComponent();
             //обьязательно !
-            _process_installer.Account = ServiceAccount.User; // тип учетной записи от которой запускать
+            _process_installer.Account = ServiceAccount.LocalSystem; // тип учетной записи от которой запускать
             // что бы не просило логин и пароль учетки но хз будет ли работать
             _process_installer.Password = null;
             _process_installer.Username = null;
@@ -29,6 +29,8 @@ namespace Cookie_listener
 
             Installers.Add(_service_installer);
             Installers.Add(_process_installer);
+
+           
         }
         private void _installer_AfterUninstall(object sender, InstallEventArgs e)
         {
@@ -48,6 +50,7 @@ namespace Cookie_listener
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Установилось");
+            this.Container.
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
